@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewpiort" content="width=device-width, initial-scale=1"/>
+
+    <title>Página de inicio</title>
+
+    <link href="../Styles/index_style.css"  rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../Resources/materialize/css/materialize.min.css"  media="screen,projection"/>
+  </head>
+  <body>
+      <nav class="teal">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo" id="title_logo">SVG</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="badges.html">Formas</a></li>
+            <li><a href="collapsible.html">Filtros</a></li>
+            <li><a href="mobile.html">JavaScript</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.html">Introducción</a></li>
+            <li><a href="badges.html">Formas</a></li>
+            <li><a href="collapsible.html">Filtros</a></li>
+            <li><a href="mobile.html">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="parallax-container">
+        <div class="parallax"><img src="../Resources/green-polygon-wallpaper.jpg"/></div>
+
+          <div class="row container" id="row_container_top">
+            <div class="col s12 m12 l12 xl12">
+              <h1 class="center-align white-text"><b>Bienvenido al mundo de SVG</b></h1>
+              <h4 class="center-align white-text">Scalable Vector Graphics.</h4>
+              <h5 class="center-align white-text">(Gráficos basados en vectores escalables).</h5>
+            </div>
+          </div>
+      </div>
+
+      <div class="container" id="container_top">
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h2 class="center-align">Introducción</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12 l12 xl12 z-depth-4" id="video_responsive">
+            <video class="responsive-video" controls>
+              <source src="../Resources/svgintroduction.mp4" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h4>1. ¿Qué son los gráficos vectoriales?</h4>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <p>Dentro de la web se trabajan dos tipos de imagen:</p>
+            <dl>
+              <dt><b>-</b>Imágenes de mapas de bits: </dt>
+              <dd>Son definidas usando una grilla de pixeles. Ejemplos: Bitmap (.bmp), PNG (.png), JPEG (.jpg) y GIF (.gif).</dd>
+              <dt><b>-</b>Imágenes vectoriales definidas: </dt>
+              <dd>Están definidas usando logaritmos. Contiene definiciones de formas y rutas que la computadora puede usar para calcular cómo deve verse la imagen cuando aparece en pantalla. Ejempplo: SVG (.svg).</dd>
+            </dl>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <div class="row">
+              <div class="col s6 m6 l6 xl6">
+                  <img src="../Resources/rectangulo-azulpng.png" alt="Rectangulo azul" width="100%"/>
+              </div>
+              <div class="col s6 m6 l6 xl6">
+                <img src="../Resources/rectangulo-azulsvg.png" alt="rectangulo svg" srcset="../Resources/rectangulo-azulsvg.svg" width="100%"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h4>2. ¿Qué es SVG?</h4>
+          </div>
+          <div class="col s12 m12 l4 push-l8 xl4 push-xl8 center-align">
+            <img src="../Resources/svg-flat.png" alt="signo de svg" height="100%"/>
+          </div>
+          <div class="col s12 m12 l8 pull-l4 xl8 pull-xl4">
+            Es un formato gráfico basado en XML para crear imágenes vectoriales. Tiene un lenguaje de marcado (como HTML).<br/>
+            <h5>Historia</h5>
+            <p>Es una recomendación del W3C. Se comenzó a desarrollar por ellos en 1999 y en 2001 sacaron su primera versión.<br/>
+            Para el año 2004, Firefox lo implementó en su buscador al igual que Google Chrome en 2007 y la versión 9 de Internet Explorer.<br/>
+            Actualmente está en la versión 1.1.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h5>Ventajas del formato.</h5>
+            <ul>
+                <li>-No pierde calidad por el zoom.</li>
+                <li>-Se puede escalar.</li>
+                <li>-Se muestra en forma progresiva.</li>
+                <li>-Se puede reducir su tamaño a travéz del formato de compresión GZIP.</li>
+                <li>-Se le pueden aplicar estilos CSS</li>
+                <li>-Se puede modificar con Java Script</li>
+                <li>-Al ser XML, es indexable por los buscadores.</li>
+                <li>-Es más ligero en tamaño comparado con su versión en mapa de bits.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer class="page-footer teal">
+          <div class="container">
+            <div class="row">
+              <div class="col l12 s12">
+                <span class="white-text">Página desarrollada por Avalos Gutiérrez Juan Ramón.</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2017 All rights reserved
+            </div>
+          </div>
+      </footer>
+
+    <script type="text/javascript" src="../Resources/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../Resources/materialize/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="../Resources/normalevents.js"></script>
+  </body>
+</html>
