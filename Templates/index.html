@@ -18,12 +18,14 @@
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="index.html">Introducción</a></li>
+            <li><a href="introsvg.html">&#60SVG&#62</a></li>
             <li><a href="badges.html">Formas</a></li>
             <li><a href="collapsible.html">Filtros</a></li>
             <li><a href="mobile.html">JavaScript</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
             <li><a href="index.html">Introducción</a></li>
+            <li><a href="introsvg.html">&#60SVG&#62</a></li>
             <li><a href="badges.html">Formas</a></li>
             <li><a href="collapsible.html">Filtros</a></li>
             <li><a href="mobile.html">JavaScript</a></li>
@@ -73,10 +75,10 @@
           <div class="col s12 m12 l6 xl6">
             <div class="row">
               <div class="col s6 m6 l6 xl6">
-                  <img src="../Resources/rectangulo-azulpng.png" alt="Rectangulo azul" width="100%"/>
+                  <img src="../Resources/rectangulo-azulpng.png" alt="Rectangulo azul" width="100%" id="rectangulo_png"/>
               </div>
               <div class="col s6 m6 l6 xl6">
-                <img src="../Resources/rectangulo-azulsvg.png" alt="rectangulo svg" srcset="../Resources/rectangulo-azulsvg.svg" width="100%"/>
+                <img src="../Resources/rectangulo-azulsvg.png" alt="rectangulo svg" srcset="../Resources/rectangulo-azulsvg.svg" id="rectangulo_svg" width="100%"/>
               </div>
             </div>
           </div>
@@ -107,7 +109,7 @@
                 <li>-Se le pueden aplicar estilos CSS</li>
                 <li>-Se puede modificar con Java Script</li>
                 <li>-Al ser XML, es indexable por los buscadores.</li>
-                <li>-Es más ligero en tamaño comparado con su versión en mapa de bits.</li>
+                <li>-Es más ligero en tamaño comparado con su versión en mapa de bits. <br/><button class="waves-effect waves-light btn" id="boton_mostrar">Mostrar tamaños</button></li>
             </ul>
           </div>
         </div>
@@ -117,7 +119,7 @@
           <div class="container">
             <div class="row">
               <div class="col l12 s12">
-                <span class="white-text">Página desarrollada por Avalos Gutiérrez Juan Ramón.</span>
+                <span class="white-text" id="pie">Página desarrollada por Avalos Gutiérrez Juan Ramón.</span>
               </div>
             </div>
           </div>
