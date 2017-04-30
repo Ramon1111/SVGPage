@@ -10,4 +10,10 @@ $(document).ready(function(){
     $('#rectangulo_svg').attr('data-tooltip',"267 bytes");
     $('.tooltipped').tooltip({delay: 50});
   });
+  $('.prefijos').hide();
+  $('#mostrar_prefijos').click(function(){
+    $('#mostrar_prefijos').hide();
+    $('.prefijos').show();
+    Materialize.fadeInImage('.prefijos')
+  });
 })

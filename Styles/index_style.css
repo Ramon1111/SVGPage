@@ -9,3 +9,15 @@
 #video_responsive{
   padding-top:2%;
 }
+.namespaces_example{
+  text-indent: 2em;
+}
+.namespace_definition{
+  text-align: justify;
+}
+blockquote{
+  border-left-color:rgb(77,182,172);
+}
+.prefijos{
+  opacity:0;
+}
