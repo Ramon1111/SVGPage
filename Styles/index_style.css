@@ -3,6 +3,9 @@
   padding-bottom:2%;
   margin-top:7%;
 }
+ #menu_header{
+  padding-right:2%;
+}
 #title_logo{
   padding-left:2%;
 }
@@ -18,6 +21,9 @@
 blockquote{
   border-left-color:rgb(77,182,172);
 }
-.prefijos{
+.prefijos, #secret_part{
   opacity:0;
+}
+.ventaja-desventaja{
+  padding:2%;
 }

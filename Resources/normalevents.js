@@ -16,4 +16,10 @@ $(document).ready(function(){
     $('.prefijos').show();
     Materialize.fadeInImage('.prefijos')
   });
+  var options = [
+    {selector: '#secret_part', offset: 500, callback: function() {
+      Materialize.fadeInImage('#secret_part');
+    } },
+  ];
+  Materialize.scrollFire(options);
 })
