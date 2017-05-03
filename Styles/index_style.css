@@ -12,7 +12,7 @@
 #video_responsive{
   padding-top:2%;
 }
-.namespaces_example{
+.namespaces_example, .shapes_indent{
   text-indent: 2em;
 }
 .namespace_definition{

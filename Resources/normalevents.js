@@ -1,3 +1,4 @@
+var x;
 $(document).ready(function(){
   $(".button-collapse").sideNav();
   $('.parallax').parallax();
@@ -27,3 +28,15 @@ $(document).ready(function(){
 
   $(".dropdown-button").dropdown();
 })
+
+function cambio(element, shape){
+  $("#"+shape).attr(element.id,element.value);
+
+  if(shape=='rectangulo'){
+    $("#"+shape+"_card").html('&#60rect<br/>x="'+$("#"+shape).attr('x')+'"<br/>y="'+$("#"+shape).attr('y')+'"<br/>width="'+$("#"+shape).attr('width')+'"<br/>height="'+$("#"+shape).attr('height')+'"&#62');
+  }
+  else{
+    if(shape=='circulo')
+      console.log('no es rectangulo');
+  }
+}
