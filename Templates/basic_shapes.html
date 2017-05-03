@@ -96,6 +96,97 @@
           </div>
         </div>
       </div>
+      <div class="circle">
+        <h2>&#60circle/&#62</h2>
+        <div class="row">
+          <div class="col s12 m12 l5 xl5">
+            Para hacer círculos e.e
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text text-darken-2">cx</span> &#38 <span class="teal-text text-darken-2">cy</span>: Coordenadas del centro.</li>
+              <li class="collection-item"><span class="teal-text text-darken-2">r</span>: Radio del círculo.</li>
+            </ul>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="circulo_card">
+                  &#60circle<br/>cx="30"<br/>cy="30"<br/>r="20"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l7 xl7">
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <form action="#">
+                  <p class="range-field">
+                    <label>CX</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>CY</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>r</label>: <input type="range" id="r" min="0" max="200" onchange="cambio(this, 'circulo')" value="20"/>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
+                  <circle cx="30" cy="30" r="20" fill="black" id="circulo"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ellipse">
+        <h2>&#60ellipse/&#62</h2>
+        <div class="row">
+          <div class="col s12 m12 l5 xl5">
+            Para hacer elipses e.e
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text text-darken-2">cx</span> &#38 <span class="teal-text text-darken-2">cy</span>: Coordenadas del centro.</li>
+              <li class="collection-item"><span class="teal-text text-darken-2">rx</span> &#38 <span class="teal-text text-darken-2">ry</span>: Radio horizontal y vertical.</li>
+            </ul>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="elipse_card">
+                  &#60ellipse<br/>cx="30"<br/>cy="30"<br/>rx="30"<br/>ry="20"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l7 xl7">
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <form action="#">
+                  <p class="range-field">
+                    <label>CX</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>CY</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>rx</label>: <input type="range" id="rx" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>ry</label>: <input type="range" id="ry" min="0" max="100" onchange="cambio(this, 'elipse')" value="20"/>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
+                  <ellipse cx="30" cy="30" rx="30" ry="20" fill="black" id="elipse"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer class="page-footer teal">
