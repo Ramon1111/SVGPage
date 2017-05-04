@@ -149,13 +149,46 @@
                 <label>y</label>: <input type="range" data-moveto="M" id="My" min="0" max="100" onchange="cambiopath(this, 'M')" value="10"/>
               </p>
             </form>
-            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150">
-              <path d="M 10 10" class="L"/>
-              <circle cx="10" cy="10" r="2" class="L"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" version="1.1">
+              <path d="M 10 10" class="M"/>
+              <circle cx="10" cy="10" r="2" class="M"/>
             </svg>
           </div>
         </div>
       </div>
+
+      <div class="lineto">
+        <h5>Line to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Dibuja una linea recta desde la posición actual a una nueva.</p>
+            <blockquote>L x y</blockquote> ó <blockquote>l dx dy</blockquote>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="L_card">
+                  &#60path d="<br/>M 10 10<br/>L 40 40"<br/>
+                  stroke="black"<br/>
+                  stroke-width="2"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <form action="#">
+              <p class="range-field">
+                <label>x</label>: <input type="range" data-lineto="L" id="Lx" min="0" max="200" onchange="cambiopath(this, 'L')" value="40"/>
+              </p>
+              <p class="range-field">
+                <label>y</label>: <input type="range" data-lineto="L" id="Ly" min="0" max="200" onchange="cambiopath(this, 'L')" value="40"/>
+              </p>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 10 10 L 40 40" stroke="black" stroke-width="2" class="L"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <footer class="page-footer teal">

@@ -37,14 +37,19 @@ function cambio(element, shape){
 
 function cambiopath(element, comand){
   if(comand =='M'){//Para el path con "d": moveto
-    console.log(element.dataset.moveto+" "+$("#Mx").val()+" "+$("#My").val());
     var moveto = element.dataset.moveto+" "+$("#Mx").val()+" "+$("#My").val();
     var circx = $("#Mx").val();
     var circy = $("#My").val();
-    $('svg path').attr("d",moveto);
-    $('svg circle').attr("cx",circx);
-    $('svg circle').attr("cy",circy);
+    $('svg path.M').attr("d",moveto);
+    $('svg circle.M').attr("cx",circx);
+    $('svg circle.M').attr("cy",circy);
     $("#"+comand+"_card").html('&#60path d="'+moveto+'"/&#62<br/>&#60circle cx="'+circx+'" cy="'+circy+'" r="2"/&#62');
+  }
+  if(comand=="L"){
+    var lineto = element.dataset.lineto+" "+$("#Lx").val()+" "+$("#Ly").val();
+    $("#"+comand+"_card").html('&#60path d="<br/>M 10 10<br/>'+lineto+'"<br/>stroke="black"<br/>stroke-width="2"/&#62');
+    $('svg path.L').attr("d","M 10 10 "+lineto);
+    console.log(lineto);
   }
 }
 
