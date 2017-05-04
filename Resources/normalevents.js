@@ -1,6 +1,15 @@
 //Para cambiar el SVG de los ejemplos
 function cambio(element, shape){
-  $("#"+shape).attr(element.id,element.value);
+  if((shape != 'poligono') && (shape != 'polilinea')){
+    $("#"+shape).attr(element.id,element.value);
+  }
+  else{
+    console.log(element.dataset.shape);
+    if(element.dataset.shape == 'points1')
+      $("#"+shape).attr('points',$("#"+element.dataset.shape).val());
+    else
+      $("#"+shape).attr(element.dataset.shape,$("#"+element.dataset.shape).val());
+  }
 
   if(shape=='rectangulo')
     $("#"+shape+"_card").html('&#60rect<br/>x="'+$("#"+shape).attr('x')+'"<br/>y="'+$("#"+shape).attr('y')+'"<br/>width="'+$("#"+shape).attr('width')+'"<br/>height="'+$("#"+shape).attr('height')+'"&#62');
@@ -10,6 +19,18 @@ function cambio(element, shape){
     else {
       if(shape=='elipse')
         $("#"+shape+"_card").html('&#60ellipse<br/>cx="'+$("#"+shape).attr('cx')+'"<br/>cy="'+$("#"+shape).attr('cy')+'"<br/>rx="'+$("#"+shape).attr('rx')+'"<br/>ry="'+$("#"+shape).attr('ry')+'"&#62');
+      else{
+        if(shape=='poligono')
+          $("#"+shape+"_card").html('&#60polygon<br/>points="'+$("#"+element.dataset.shape).val()+'"/&#62');
+        else {
+          if(shape =='linea')
+            $("#"+shape+"_card").html('&#60line<br/>x1="'+$("#"+shape).attr('x1')+'"<br/>y1="'+$("#"+shape).attr('y1')+'"<br/>x2="'+$("#"+shape).attr('x2')+'"<br/>y2="'+$("#"+shape).attr('y2')+'"&#62');
+          else {
+            if(shape =='polilinea')
+              $("#"+shape+"_card").html('&#60polygon<br/>points="'+$("#"+element.dataset.shape).val()+'"<br/>fill="none"/&#62');
+          }
+        }
+      }
     }
   }
 }

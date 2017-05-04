@@ -119,13 +119,13 @@
               <div class="col s12 m12 l12 xl12">
                 <form action="#">
                   <p class="range-field">
-                    <label>CX</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
+                    <label>cx</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
                   </p>
                   <p class="range-field">
-                    <label>CY</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
+                    <label>cy</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'circulo')" value="30"/>
                   </p>
                   <p class="range-field">
-                    <label>r</label>: <input type="range" id="r" min="0" max="200" onchange="cambio(this, 'circulo')" value="20"/>
+                    <label>r</label>: <input type="range" id="r" min="0" max="100" onchange="cambio(this, 'circulo')" value="20"/>
                   </p>
                 </form>
               </div>
@@ -163,10 +163,10 @@
               <div class="col s12 m12 l12 xl12">
                 <form action="#">
                   <p class="range-field">
-                    <label>CX</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
+                    <label>cx</label>: <input type="range" id="cx" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
                   </p>
                   <p class="range-field">
-                    <label>CY</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
+                    <label>cy</label>: <input type="range" id="cy" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
                   </p>
                   <p class="range-field">
                     <label>rx</label>: <input type="range" id="rx" min="0" max="100" onchange="cambio(this, 'elipse')" value="30"/>
@@ -181,6 +181,137 @@
               <div class="col s12 m12 l12 xl12">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
                   <ellipse cx="30" cy="30" rx="30" ry="20" fill="black" id="elipse"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="polygon">
+        <h2>&#60polygon/&#62</h2>
+        <div class="row">
+          <div class="col s12 m12 l5 xl5">
+            Para hacer polígonos de lados rectos e.e<br/>
+            Mínimo de tres lados.
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text text-darken-2">points</span>: Coordenadas de los puntos/vértices.</li>
+            </ul>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="poligono_card">
+                  &#60polygon<br/>points="5,5 10,90 100,30"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l7 xl7">
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <div class="row">
+                  <form action="#">
+                    <div class="input-field col s8 m8 l8 xl8">
+                      <input type="text" value="5,5 10,90 100,30" class="validate" id="points"/>
+                      <label for="points">points</label>
+                    </div>
+                    <a data-shape="points" class="waves-effect waves-light btn col s4 m4 l4 xl4" onclick="cambio(this, 'poligono')" >button</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
+                  <polygon points="5,5 10,90 100,30" fill="black" id="poligono"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line">
+        <h2>&#60line/&#62</h2>
+        <div class="row">
+          <div class="col s12 m12 l5 xl5">
+            Para hacer líneas rectas e.e
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text text-darken-2">x1</span> &#38 <span class="teal-text text-darken-2">y1</span>: Coordenada de inicio.</li>
+              <li class="collection-item"><span class="teal-text text-darken-2">x2</span> &#38 <span class="teal-text text-darken-2">y2</span>: Coordenada final.</li>
+            </ul>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="linea_card">
+                  &#60line<br/>x1="30"<br/>y1="30"<br/>x2="30"<br/>y2="20"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l7 xl7">
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <form action="#">
+                  <p class="range-field">
+                    <label>x1</label>: <input type="range" id="x1" min="0" max="100" onchange="cambio(this, 'linea')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>y1</label>: <input type="range" id="y1" min="0" max="100" onchange="cambio(this, 'linea')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>x2</label>: <input type="range" id="x2" min="0" max="100" onchange="cambio(this, 'linea')" value="30"/>
+                  </p>
+                  <p class="range-field">
+                    <label>y2</label>: <input type="range" id="y2" min="0" max="100" onchange="cambio(this, 'linea')" value="20"/>
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
+                  <line x1="30" y1="30" x2="30" y2="20" stroke="black" stroke-width="3" id="linea"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="polyline">
+        <h2>&#60polyline/&#62</h2>
+        <div class="row">
+          <div class="col s12 m12 l5 xl5">
+            Para hacer poli-líneas rectas e.e<br/>
+            Mínimo de dos puntos.
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text text-darken-2">points</span>: Coordenadas de los puntos/vértices.</li>
+            </ul>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="polilinea_card">
+                  &#60polyline<br/>points="5,5 10,90 100,30" <br/>fill="none"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l7 xl7">
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <div class="row">
+                  <form action="#">
+                    <div class="input-field col s8 m8 l8 xl8">
+                      <input type="text" value="5,5 10,90 100,30" class="validate" id="points1"/>
+                      <label for="points1">points</label>
+                    </div>
+                    <a data-shape="points1" class="waves-effect waves-light btn col s4 m4 l4 xl4" onclick="cambio(this, 'polilinea')" >button</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="150">
+                  <polyline points="5,5 10,90 100,30" fill="none" stroke="black" stroke-width="2" id="polilinea"/>
                 </svg>
               </div>
             </div>
