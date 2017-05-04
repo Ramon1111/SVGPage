@@ -51,6 +51,13 @@ function cambiopath(element, comand){
     $('svg path.L').attr("d","M 10 10 "+lineto);
     console.log(lineto);
   }
+  if(comand=='H'||comand=='V'){
+    var V="V "+$("#Vy").val();
+    var H="H "+$("#Hx").val();
+    $('svg path.V').attr("d","M 100 100 "+V)
+    $('svg path.H').attr("d","M 100 100 "+H);
+    $("#HV_card").html('&#60path d="M 100 100 '+H+'" stroke="black" stroke-width="2"/&#62<br/>&#60path d="M 100 100 '+V+'" stroke="red" stroke-width="2"/&#62');
+  }
 }
 
 $(document).ready(function(){

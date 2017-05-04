@@ -189,6 +189,45 @@
         </div>
       </div>
 
+      <div class="hvto">
+        <h5>Line to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Dibuja una linea recta horixontal o vertical desde la posición actual a una nueva.</p>
+            <div class="row">
+              <div class="col s6 m6 l6 xl6">
+                <blockquote>H x</blockquote> ó <blockquote>h dx</blockquote>
+              </div>
+              <div class="col s6 m6 l6 xl6">
+                <blockquote>V y</blockquote> ó <blockquote>v dy</blockquote>
+              </div>
+            </div>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="HV_card">
+                  &#60path d="M 100 100 H 40" stroke="black" stroke-width="2"/&#62<br/>
+                  &#60path d="M 100 100 V 40" stroke="red" stroke-width="2"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <form action="#">
+              <p class="range-field">
+                <label>H x</label>: <input type="range" data-hv="H" id="Hx" min="0" max="200" onchange="cambiopath(this, 'H')" value="40"/>
+              </p>
+              <p class="range-field">
+                <label>V y</label>: <input type="range" data-hv="V" id="Vy" min="0" max="200" onchange="cambiopath(this, 'V')" value="40"/>
+              </p>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 100 100 H 40" stroke="black" stroke-width="2" class="H"/>
+              <path d="M 100 100 V 40" stroke="red" stroke-width="2" class="V"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <footer class="page-footer teal">
