@@ -35,6 +35,18 @@ function cambio(element, shape){
   }
 }
 
+function cambiopath(element, comand){
+  if(comand =='M'){//Para el path con "d": moveto
+    console.log(element.dataset.moveto+" "+$("#Mx").val()+" "+$("#My").val());
+    var moveto = element.dataset.moveto+" "+$("#Mx").val()+" "+$("#My").val();
+    var circx = $("#Mx").val();
+    var circy = $("#My").val();
+    $('svg path').attr("d",moveto);
+    $('svg circle').attr("cx",circx);
+    $('svg circle').attr("cy",circy);
+    $("#"+comand+"_card").html('&#60path d="'+moveto+'"/&#62<br/>&#60circle cx="'+circx+'" cy="'+circy+'" r="2"/&#62');
+  }
+}
 
 $(document).ready(function(){
   $(".button-collapse").sideNav();

@@ -52,8 +52,108 @@
           <p>Es el elemento más poderoso en la libreria SVG de figuras básicas. Se puede usar para todo.</p>
           <h6>Atributos:</h6>
           <ul class="collection">
-            <li class="collection-item"><span class="teal-text text-darken-2">pathlength</span></li>
+            <li class="collection-item"><span class="teal-text text-darken-2">pathlength</span>: Se acompaña con un atributo global llamado <span class="teal-text text-darken-2">stroke-dasharray</span> que especifica la longitud de la ruta(path) en unidades de usuario. Sirve para calibrar calculos de distancia del navegador.</li>
+            <li class="collection-item"><span class="teal-text text-darken-2">d</span>: Define el camino a seguir.</li>
           </ul>
+        </div>
+      </div>
+      <h3>Atributo: <span class="teal-text text-darken-2">d</span></h3>
+      <div class="row">
+        <div class="col s12 m12 l12 xl12">
+          <p>Lo que habrá dentro de este atributo serán los comandos que "path" seguirá para dibujar.</p>
+          <h4>Comandos de línea:</h4>
+          <table class="bordered responsive-table">
+            <thead class="teal white-text">
+              <tr>
+                <th>Comando</th>
+                <th>Posición Absoluta</th>
+                <th>Posición Relativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Move to</td>
+                <td>M</td>
+                <td>m</td>
+              </tr>
+              <tr>
+                <td>Line to</td>
+                <td>L</td>
+                <td>l</td>
+              </tr>
+              <tr>
+                <td>Horizontal Line to</td>
+                <td>H</td>
+                <td>h</td>
+              </tr>
+              <tr>
+                <td>Vertical Line to</td>
+                <td>V</td>
+                <td>v</td>
+              </tr>
+              <tr>
+                <td>Curve to</td>
+                <td>C</td>
+                <td>c</td>
+              </tr>
+              <tr>
+                <td>Smooth Curve to</td>
+                <td>S</td>
+                <td>s</td>
+              </tr>
+              <tr>
+                <td>Quadratic Bézier Curve to</td>
+                <td>Q</td>
+                <td>q</td>
+              </tr>
+              <tr>
+                <td>Smooth Quadratic Bézier Curve to</td>
+                <td>T</td>
+                <td>t</td>
+              </tr>
+              <tr>
+                <td>Elliptical Arc</td>
+                <td>A</td>
+                <td>a</td>
+              </tr>
+              <tr>
+                <td>Close Path</td>
+                <td>Z</td>
+                <td>z</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="moveto">
+        <h5>Move to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Esto únicamente hace mover el "puntero".</p>
+            <blockquote>M x y</blockquote> ó <blockquote>m dx dy</blockquote>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="M_card">
+                  &#60path d="M 10 10"/&#62<br/>
+                  &#60circle cx="10" cy="10" r="2"/&#62
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <form action="#">
+              <p class="range-field">
+                <label>x</label>: <input type="range" data-moveto="M" id="Mx" min="0" max="100" onchange="cambiopath(this, 'M')" value="10"/>
+              </p>
+              <p class="range-field">
+                <label>y</label>: <input type="range" data-moveto="M" id="My" min="0" max="100" onchange="cambiopath(this, 'M')" value="10"/>
+              </p>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="150">
+              <path d="M 10 10" class="L"/>
+              <circle cx="10" cy="10" r="2" class="L"/>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
