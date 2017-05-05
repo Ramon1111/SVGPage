@@ -4,7 +4,6 @@ function cambio(element, shape){
     $("#"+shape).attr(element.id,element.value);
   }
   else{
-    console.log(element.dataset.shape);
     if(element.dataset.shape == 'points1')
       $("#"+shape).attr('points',$("#"+element.dataset.shape).val());
     else
@@ -49,7 +48,6 @@ function cambiopath(element, comand){
     var lineto = element.dataset.lineto+" "+$("#Lx").val()+" "+$("#Ly").val();
     $("#"+comand+"_card").html('&#60path d="<br/>M 10 10<br/>'+lineto+'"<br/>stroke="black"<br/>stroke-width="2"/&#62');
     $('svg path.L').attr("d","M 10 10 "+lineto);
-    console.log(lineto);
   }
   if(comand=='H'||comand=='V'){
     var V="V "+$("#Vy").val();
@@ -57,6 +55,28 @@ function cambiopath(element, comand){
     $('svg path.V').attr("d","M 100 100 "+V)
     $('svg path.H').attr("d","M 100 100 "+H);
     $("#HV_card").html('&#60path d="M 100 100 '+H+'" stroke="black" stroke-width="2"/&#62<br/>&#60path d="M 100 100 '+V+'" stroke="red" stroke-width="2"/&#62');
+  }
+  if(comand=='C'){
+    var Cx1 = $('#Cx1').val();
+    var Cy1 = $('#Cy1').val();
+    var Cx2 = $('#Cx2').val();
+    var Cy2 = $('#Cy2').val();
+    var Cx = $('#Cx').val();
+    var Cy = $('#Cy').val();
+    var newC = "M 20,80 C "+Cx1+","+Cy1+" "+Cx2+","+Cy2+" "+Cx+","+Cy;
+    var newhtmlC = '&#60;path d="M 20,80<br/>C '+Cx1+','+Cy1+'<br/>'+Cx2+','+Cy2+'<br/>'+Cx+','+Cy+'<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="20" y1="80" x2="'+Cx1+'" y2="'+Cy1+'" stroke="red"/&#62;<br/>&#60;line x1="'+Cx+'" y1="'+Cy+'" x2="'+Cx2+'" y2="'+Cy2+'" stroke="blue"/&#62;';
+    $('svg path.C').attr('d',newC);
+    $('#CLine1').attr({
+      "x2":Cx1,
+      "y2":Cy1
+    });
+    $('#CLine2').attr({
+      "x1":Cx,
+      "y1":Cy,
+      "x2":Cx2,
+      "y2":Cy2
+    });
+    $("#curveto_card").html(newhtmlC);
   }
 }
 

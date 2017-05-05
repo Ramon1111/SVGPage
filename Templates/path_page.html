@@ -17,12 +17,12 @@
     <ul class="dropdown-content" id="dropdown_shapes">
       <li><a href="basic_shapes.html">Formas Básicas</a></li>
       <li class="divider"></li>
-      <li><a href="path_page.html">&#60PATH&#62</a></li>
+      <li><a href="path_page.html">&#60;PATH&#62;</a></li>
     </ul>
     <ul class="dropdown-content" id="dropdown_shapes_2">
       <li><a href="basic_shapes.html">Formas Básicas</a></li>
       <li class="divider"></li>
-      <li><a href="path_page.html">&#60PATH&#62</a></li>
+      <li><a href="path_page.html">&#60;PATH&#62;</a></li>
     </ul>
     <nav class="teal">
       <div class="nav-wrapper">
@@ -30,14 +30,14 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down" id="menu_header">
           <li><a href="index.html">Introducción</a></li>
-          <li><a href="introsvg.html">&#60SVG&#62</a></li>
+          <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="collapsible.html">Filtros</a></li>
           <li><a href="mobile.html">JavaScript</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="index.html">Introducción</a></li>
-          <li><a href="introsvg.html">&#60SVG&#62</a></li>
+          <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes_2">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="collapsible.html">Filtros</a></li>
           <li><a href="mobile.html">JavaScript</a></li>
@@ -46,7 +46,7 @@
     </nav>
 
     <div class="container">
-      <h1 class="center-align">&#60PATH/&#62</h1>
+      <h1 class="center-align">&#60;PATH/&#62;</h1>
       <div class="row">
         <div class="col s12 m12 l12 xl12">
           <p>Es el elemento más poderoso en la libreria SVG de figuras básicas. Se puede usar para todo.</p>
@@ -134,8 +134,8 @@
             <div class="card  teal lighten-2">
               <div class="card-content white-text">
                 <p id="M_card">
-                  &#60path d="M 10 10"/&#62<br/>
-                  &#60circle cx="10" cy="10" r="2"/&#62
+                  &#60;path d="M 10 10"/&#62;<br/>
+                  &#60;circle cx="10" cy="10" r="2"/&#62;
                 </p>
               </div>
             </div>
@@ -164,11 +164,11 @@
             <p>Dibuja una linea recta desde la posición actual a una nueva.</p>
             <blockquote>L x y</blockquote> ó <blockquote>l dx dy</blockquote>
             <div class="card  teal lighten-2">
-              <div class="card-content white-text">
+              <div class="card-content white-text">;
                 <p id="L_card">
-                  &#60path d="<br/>M 10 10<br/>L 40 40"<br/>
+                  &#60;path d="<br/>M 10 10<br/>L 40 40"<br/>
                   stroke="black"<br/>
-                  stroke-width="2"/&#62
+                  stroke-width="2"/&#62;
                 </p>
               </div>
             </div>
@@ -193,7 +193,7 @@
         <h5>Line to</h5>
         <div class="row">
           <div class="col s12 m12 l6 xl6">
-            <p>Dibuja una linea recta horixontal o vertical desde la posición actual a una nueva.</p>
+            <p>Dibuja una linea recta horizontal o vertical desde la posición actual a una nueva.</p>
             <div class="row">
               <div class="col s6 m6 l6 xl6">
                 <blockquote>H x</blockquote> ó <blockquote>h dx</blockquote>
@@ -205,8 +205,8 @@
             <div class="card  teal lighten-2">
               <div class="card-content white-text">
                 <p id="HV_card">
-                  &#60path d="M 100 100 H 40" stroke="black" stroke-width="2"/&#62<br/>
-                  &#60path d="M 100 100 V 40" stroke="red" stroke-width="2"/&#62
+                  &#60;path d="M 100 100 H 40" stroke="black" stroke-width="2"/&#62;<br/>
+                  &#60;path d="M 100 100 V 40" stroke="red" stroke-width="2"/&#62;
                 </p>
               </div>
             </div>
@@ -223,6 +223,56 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
               <path d="M 100 100 H 40" stroke="black" stroke-width="2" class="H"/>
               <path d="M 100 100 V 40" stroke="red" stroke-width="2" class="V"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="curveto">
+        <h5>Curve to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Dibuja una curva tomando en cuenta las pendientes de rectas que dibujes (imaginariamente).</p>
+            <div class="row">
+              <div class="col s6 m6 l6 xl6">
+                <blockquote>C x1 y1 x2 y2 x y</blockquote> ó <blockquote>c dx1 dy1 dx2 dy2 dx dy</blockquote>
+              </div>
+            </div>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="curveto_card">
+                  &#60;path d="M 20 80<br/>C 0,120<br/>170,120<br/>150,80"<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>
+                  &#60;line x1="20" y1="80" x2="0" 2y="120" stroke="red"/&#62;<br/>
+                  &#60;line x1="150" y1="80" x2="170" 2y="120" stroke="blue"/&#62;
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <form action="#">
+              <p class="range-field">
+                <label>x1</label>: <input type="range" data-curveto="C" id="Cx1" min="0" max="200" onchange="cambiopath(this, 'C')" value="0"/>
+              </p>
+              <p class="range-field">
+                <label>y1</label>: <input type="range" data-curveto="C" id="Cy1" min="0" max="200" onchange="cambiopath(this, 'C')" value="120"/>
+              </p>
+              <p class="range-field">
+                <label>x2</label>: <input type="range" data-curveto="C" id="Cx2" min="0" max="200" onchange="cambiopath(this, 'C')" value="170"/>
+              </p>
+              <p class="range-field">
+                <label>y2</label>: <input type="range" data-curveto="C" id="Cy2" min="0" max="200" onchange="cambiopath(this, 'C')" value="120"/>
+              </p>
+              <p class="range-field">
+                <label>x</label>: <input type="range" data-curveto="C" id="Cx" min="0" max="200" onchange="cambiopath(this, 'C')" value="150"/>
+              </p>
+              <p class="range-field">
+                <label>y</label>: <input type="range" data-curveto="C" id="Cy" min="0" max="200" onchange="cambiopath(this, 'C')" value="80"/>
+              </p>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 20,80 C 0,120 170,120 150,80" stroke="black" stroke-width="2" class="C" fill="none"/>
+              <line x1="20" y1="80" x2="0" y2="120" stroke="red" id="CLine1"/>
+              <line x1="150" y1="80" x2="170" y2="120" stroke="blue" id="CLine2"/>
             </svg>
           </div>
         </div>

@@ -17,12 +17,12 @@
     <ul class="dropdown-content" id="dropdown_shapes">
       <li><a href="basic_shapes.html">Formas Básicas</a></li>
       <li class="divider"></li>
-      <li><a href="path_page.html">&#60PATH&#62</a></li>
+      <li><a href="path_page.html">&#60;PATH&#62;</a></li>
     </ul>
     <ul class="dropdown-content" id="dropdown_shapes_2">
       <li><a href="basic_shapes.html">Formas Básicas</a></li>
       <li class="divider"></li>
-      <li><a href="path_page.html">&#60PATH&#62</a></li>
+      <li><a href="path_page.html">&#60;PATH&#62;</a></li>
     </ul>
     <nav class="teal">
       <div class="nav-wrapper">
@@ -30,14 +30,14 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down" id="menu_header">
           <li><a href="index.html">Introducción</a></li>
-          <li><a href="introsvg.html">&#60SVG&#62</a></li>
+          <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="collapsible.html">Filtros</a></li>
           <li><a href="mobile.html">JavaScript</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="index.html">Introducción</a></li>
-          <li><a href="introsvg.html">&#60SVG&#62</a></li>
+          <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes_2">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="collapsible.html">Filtros</a></li>
           <li><a href="mobile.html">JavaScript</a></li>
@@ -48,12 +48,12 @@
       <div class="container">
         <div>
           <div class="row">
-            <h1>&#60SVG&#62</h1>
+            <h1>&#60;SVG&#62;</h1>
           </div>
         </div>
         <div class="row">
           <div class="col s12 m12 l6 xl6">
-              <p>Para generar una imagen vectorial, que en este caso son imagenes de formato .svg, usamos la etiqueta &#60SVG&#62<br/>
+              <p>Para generar una imagen vectorial, que en este caso son imagenes de formato .svg, usamos la etiqueta &#60;SVG&#62;<br/>
               Algunos atributos importantes son:</p>
               <ul class="collection">
                 <li class="collection-item"><span class="teal-text text-darken-2">width</span>: Ancho de nuestra imagen svg.</li>
@@ -64,7 +64,7 @@
           <div class="col s12 m12 l6 xl6">
             <div class="card  teal lighten-2">
               <div class="card-content white-text">
-                <p>&#60svg width="80" heigth="30"&#62 <br/>&#60/svg&#62</p>
+                <p>&#60;svg width="80" heigth="30"&#62; <br/>&#60;/svg&#62;</p>
               </div>
             </div>
           </div>
@@ -77,19 +77,19 @@
                 Al ser SVG basado en XML es necesario ponerle un 'namespace' al contenido.<br/>
                 Un namespace es una cadena de caracteres que le dice a la computadora con que 'dialecto' se van a tratar las etiquetas.<br/>
                 Esta se asemeja mucho a una URL porque son unicas. No se deben de tratar como si fueran un enlace.
-                Los namespaces se declaran en la etiqueta &#60svg&#62 con el atributo <code class="teal white-text">xmlns</code> con el valor de 'http://www.w3.org/2000/svg'.<br/>
+                Los namespaces se declaran en la etiqueta &#60;svg&#62; con el atributo <code class="teal white-text">xmlns</code> con el valor de 'http://www.w3.org/2000/svg'.<br/>
                 También se deve de colocar la versión (1.1) con el atributo <code class="teal white-text">version</code>.
               </p>
             </div>
             <div class="col s12 m12 l6 xl6">
               <div class="card  teal lighten-2">
                 <div class="card-content white-text">
-                  <p>&#60svg</p>
+                  <p>&#60;svg</p>
                   <p class="namespaces_example">width="80"</p>
                   <p class="namespaces_example">heigth="30"</p>
                   <p class="namespaces_example">xmlns="http://www.w3.or/2000/svg"</p>
-                  <p class="namespaces_example">version="1.1"&#62</p>
-                  <p>&#60/svg&#62</p>
+                  <p class="namespaces_example">version="1.1"&#62;</p>
+                  <p>&#60;/svg&#62;</p>
                 </div>
               </div>
             </div>
@@ -107,14 +107,14 @@
             <div class="col s12 m12 l6 xl6">
               <div class="card  teal lighten-2">
                 <div class="card-content white-text">
-                  <p>&#60svg</p>
+                  <p>&#60;svg</p>
                   <p class="namespaces_example">width="80"</p>
                   <p class="namespaces_example">heigth="30"</p>
                   <p class="namespaces_example">.</p>
                   <p class="namespaces_example">.</p>
                   <p class="namespaces_example">.</p>
-                  <p class="namespaces_example">xmlns: xlink="http://www.w3.org/1999/xlink"&#62</p>
-                  <p>&#60/svg&#62</p>
+                  <p class="namespaces_example">xmlns: xlink="http://www.w3.org/1999/xlink"&#62;</p>
+                  <p>&#60;/svg&#62;</p>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@
           <div class="row">
             <div class="col s12 m12 l7 xl7 namespace_definition">
               <p>
-                Se emplea la etiqueta &#60img&#62 de HTML.<br/>
+                Se emplea la etiqueta &#60;img&#62; de HTML.<br/>
                 Se emplea el atributo <code>srcset</code> para que tome la imagen svg los navegadores compatibles y el atributo <code>src</code> se deja la imagen que tomatia si no cargara la imagen svg.
               </p>
               <blockquote>
@@ -137,11 +137,11 @@
             <div class="col s12 m12 l5 xl5">
               <div class="card  teal lighten-2">
                 <div class="card-content white-text">
-                  <p>&#60img</p>
+                  <p>&#60;img</p>
                   <p class="namespaces_example">src="imagen_png.png"</p>
                   <p class="namespaces_example">alt="imagen de svg"</p>
                   <p class="namespaces_example">srcset="imagen_svg.svg"</p>
-                  <p>/&#62</p>
+                  <p>/&#62;</p>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@
                 <h5>Ventajas:</h5>
                 <ul>
                   <li><b>-</b>Rápido y de sintaxis de imagen familiar.</li>
-                  <li><b>-</b>Se puede poner la imagen dentro de un ipervínculo &#60a&#62.</li>
+                  <li><b>-</b>Se puede poner la imagen dentro de un ipervínculo &#60;a&#62;.</li>
                 </ul>
                 <h5>Desventajas:</h5>
                 <ul>
