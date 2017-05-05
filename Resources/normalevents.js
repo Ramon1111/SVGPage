@@ -78,6 +78,22 @@ function cambiopath(element, comand){
     });
     $("#curveto_card").html(newhtmlC);
   }
+  if(comand=='S'){
+    var Sx2 = $("#Sx2").val();
+    var Sy2 = $("#Sy2").val();
+    var Sx = $("#Sx").val();
+    var Sy = $("#Sy").val();
+    var newS = 'M 20,80 C 0,120 120,120 100,80 S '+Sx2+','+Sy2+' '+Sx+','+Sy;
+    $('svg path.S').attr('d',newS);
+    $('svg #SLine3').attr({
+      "x1":Sx,
+      "y1":Sy,
+      "x2":Sx2,
+      "y2":Sy2
+    });
+    var newhtmlS= '&#60;path d="M 20 80<br/>C 0,120<br/>170,120<br/>150,80<br/> S '+Sx2+','+Sy2+'<br/>'+Sx+','+Sy+'"<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="'+Sx+'" y1="'+Sy+'" x2="'+Sx2+'" y2="'+Sy2+'" stroke="red"/&#62;';
+    $("#smoothcurveto_card").html(newhtmlS);
+  }
 }
 
 $(document).ready(function(){

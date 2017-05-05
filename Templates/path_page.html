@@ -278,6 +278,49 @@
         </div>
       </div>
 
+      <div class="smoothcurveto">
+        <h5>Smooth Curve to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Dibuja una curva tomando en cuenta las pendientes de rectas que dibujes (imaginariamente) y la curva anterior a esa (Curve to).</p>
+            <div class="row">
+              <div class="col s6 m6 l6 xl6">
+                <blockquote>S x2 y2 x y</blockquote> ó <blockquote>S dx2 dy2 dx dy</blockquote>
+              </div>
+            </div>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="smoothcurveto_card">
+                  &#60;path d="M 20 80<br/>C 0,120<br/>170,120<br/>150,80<br/> S 160,40<br/>200,80"<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>
+                  &#60;line x1="150" y1="80" x2="170" 2y="120" stroke="red"/&#62;
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <form action="#">
+              <p class="range-field">
+                <label>x2</label>: <input type="range" data-smoothcurveto="S" id="Sx2" min="0" max="200" onchange="cambiopath(this, 'S')" value="160"/>
+              </p>
+              <p class="range-field">
+                <label>y2</label>: <input type="range" data-smoothcurveto="S" id="Sy2" min="0" max="200" onchange="cambiopath(this, 'S')" value="40"/>
+              </p>
+              <p class="range-field">
+                <label>x</label>: <input type="range" data-smoothcurveto="S" id="Sx" min="0" max="200" onchange="cambiopath(this, 'S')" value="200"/>
+              </p>
+              <p class="range-field">
+                <label>y</label>: <input type="range" data-smoothcurveto="S" id="Sy" min="0" max="200" onchange="cambiopath(this, 'S')" value="80"/>
+              </p>
+            </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 20,80 C 0,120 120,120 100,80 S 160,40 200,80" stroke="black" stroke-width="2" class="S" fill="none"/>
+              <line x1="100" y1="80" x2="120" y2="120" stroke="blue" id="SLine1"/>
+              <line x1="200" y1="80" x2="160" y2="40" stroke="red" id="SLine3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <footer class="page-footer teal">
