@@ -91,8 +91,26 @@ function cambiopath(element, comand){
       "x2":Sx2,
       "y2":Sy2
     });
-    var newhtmlS= '&#60;path d="M 20 80<br/>C 0,120<br/>170,120<br/>150,80<br/> S '+Sx2+','+Sy2+'<br/>'+Sx+','+Sy+'"<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="'+Sx+'" y1="'+Sy+'" x2="'+Sx2+'" y2="'+Sy2+'" stroke="red"/&#62;';
+    var newhtmlS = '&#60;path d="M 20 80<br/>C 0,120<br/>170,120<br/>150,80<br/> S '+Sx2+','+Sy2+'<br/>'+Sx+','+Sy+'"<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="'+Sx+'" y1="'+Sy+'" x2="'+Sx2+'" y2="'+Sy2+'" stroke="red"/&#62;';
     $("#smoothcurveto_card").html(newhtmlS);
+  }
+  if(comand=='Q'){
+    var Qx1 = $("#Qx1").val();
+    var Qy1 = $("#Qy1").val();
+    var Qx = $("#Qx").val();
+    var Qy = $("#Qy").val();
+    var newQ = 'M 20,80 Q '+Qx1+','+Qy1+' '+Qx+','+Qy;
+    $("svg path.Q").attr("d",newQ);
+    $('#QLine1, #QLine2').attr({
+      "x1":Qx1,
+      "y1":Qy1
+    });
+    $('#QLine2').attr({
+      "x2":Qx,
+      "y2":Qy
+    });
+    var newhtmlQ = '&#60;path d="M 20 80<br/>Q '+Qx1+','+Qy1+'<br/>'+Qx+','+Qy+'<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="'+Qx1+'" y1="'+Qy1+'" x2="20" y2="80" stroke="red"/&#62;<br/>&#60;line x1="'+Qx1+'" y1="'+Qy1+'" x2="'+Qx+'" y2="'+Qy+'" stroke="red"/&#62;';
+    $("#quadratic_card").html(newhtmlQ);
   }
 }
 
