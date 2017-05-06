@@ -116,6 +116,9 @@ function cambiopath(element, comand){
     var Td = $("#dsq").val();
     $("svg path.T").attr("d",Td);
   }
+  if(comand=='A'){
+    $("svg path.A").attr("d",$("#arc").val());
+  }
 }
 
 $(document).ready(function(){
@@ -137,6 +140,11 @@ $(document).ready(function(){
     $('#mostrar_prefijos').hide();
     $('.prefijos').show();
     Materialize.fadeInImage('.prefijos')
+  });
+
+  $("#mostrar_axis").click(function(){
+    $("#mostrar_axis").hide();
+    Materialize.fadeInImage('#axis');
   });
 
   var options = [

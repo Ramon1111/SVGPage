@@ -409,6 +409,50 @@
         </div>
       </div>
 
+      <h3>Arcos</h3>
+
+      <div class="arcs">
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Es una forma de dibujar arcos siendo estas secciones de elipses o circunferencias.</p>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <blockquote>A rx ry x-axis-rotation large-arc-flag sweep-flag x y</blockquote> ó <blockquote>a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy</blockquote>
+              </div>
+            </div>
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="arc_card">
+                  &#60;path d=
+                  <form action="#">
+                    <div class="input-field col s12 m12 l12 xl12">
+                      <input type="text" value="M 60,80 A 55 55, 0, 0, 0, 125 125 L 125 80" class="validate" id="arc"/>
+                      <label for="arc" class="white-text">d</label>
+                    </div>
+                  </form>
+                  stroke="black" stroke-width="2" fill="green"/&#62;
+                </p>
+              </div>
+            </div>
+            <a class="waves-effect waves-teal btn col s4 m4 l4 xl4" onclick="cambiopath(this, 'A')" >Probar</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 60,80 A 55 55, 0, 0, 0, 125 125 L 125 80" stroke="black" stroke-width="2" class="A" fill="green"/>
+            </svg>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <h4>¿x-axis-rotation? ¿large-arc-flag? ¿sweep-flag?..... </h4><h4>!!!¿PERO QUÉ SIGNIFICAN?¡¡¡ :'v</h4>
+            <a class="waves-effect waves-teal btn col s4 m4 l4 xl4" id="mostrar_axis">Probar</a>
+            <div class="col s8 offset-s2 m8 offset-m2 l12 xl12" id="axis">
+              <div class="card">
+                <div class="card-image">
+                  <img src="../Resources/SVGArcs_Flags.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <footer class="page-footer teal">

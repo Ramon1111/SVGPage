@@ -21,7 +21,7 @@
 blockquote{
   border-left-color:rgb(77,182,172);
 }
-.prefijos, #secret_part{
+.prefijos, #secret_part, #axis{
   opacity:0;
 }
 .ventaja-desventaja{
