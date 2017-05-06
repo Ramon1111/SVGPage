@@ -190,7 +190,7 @@
       </div>
 
       <div class="hvto">
-        <h5>Line to</h5>
+        <h5>Horizontal &#38; Vertical Line to</h5>
         <div class="row">
           <div class="col s12 m12 l6 xl6">
             <p>Dibuja una linea recta horizontal o vertical desde la posición actual a una nueva.</p>
@@ -227,14 +227,24 @@
           </div>
         </div>
       </div>
-
+      <h2>Comandos de Curvas</h2>
+      <h3>Curvas de Bézier</h3>
+      <div class="definición">
+        <div class="row">
+          <div class="col s12 m12 l12 xl12">
+            <h6>Un poco de historia-información:</h6>
+            <p>Se denominan curvas de Bézier a un sistema desarrollado alrededor de 1960 para el trazado de dibujos técnicos de diseño aeronáutico y en el de automóviles. <br/>
+            Se denominó así en honor a Perre Bézier.</p>
+          </div>
+        </div>
+      </div>
       <div class="curveto">
         <h5>Curve to</h5>
         <div class="row">
           <div class="col s12 m12 l6 xl6">
             <p>Dibuja una curva tomando en cuenta las pendientes de rectas que dibujes (imaginariamente).</p>
             <div class="row">
-              <div class="col s6 m6 l6 xl6">
+              <div class="col s12 m12 l12 xl12">
                 <blockquote>C x1 y1 x2 y2 x y</blockquote> ó <blockquote>c dx1 dy1 dx2 dy2 dx dy</blockquote>
               </div>
             </div>
@@ -284,7 +294,7 @@
           <div class="col s12 m12 l6 xl6">
             <p>Dibuja una curva tomando en cuenta las pendientes de rectas que dibujes (imaginariamente) y la curva anterior a esa (Curve to).</p>
             <div class="row">
-              <div class="col s6 m6 l6 xl6">
+              <div class="col s12 m12 l12 xl12">
                 <blockquote>S x2 y2 x y</blockquote> ó <blockquote>S dx2 dy2 dx dy</blockquote>
               </div>
             </div>
@@ -327,7 +337,7 @@
           <div class="col s12 m12 l6 xl6">
             <p>Dibuja una curva tomando en cuenta un punto de control donde será la intersección de las líneas (imaginarias) trazadas desde los extremos de la curva.</p>
             <div class="row">
-              <div class="col s6 m6 l6 xl6">
+              <div class="col s12 m12 l12 xl12">
                 <blockquote>Q x1 y1 x y</blockquote> ó <blockquote>q dx1 dy1 dx dy</blockquote>
               </div>
             </div>
@@ -361,6 +371,40 @@
               <line x1="60" y1="10" x2="20" y2="80" stroke="red" id="QLine1"/>
               <line x1="60" y1="10" x2="120" y2="80" stroke="blue" id="QLine2"/>
             </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="smoothquadratic">
+        <h5>Smooth Quadratic Bézier Curve to</h5>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Dibuja una curva tomando en cuenta la curva anterior generando una (por así decirlo) inversa o volteada a esa.</p>
+            <div class="row">
+              <div class="col s12 m12 l12 xl12">
+                <blockquote>T x y</blockquote> ó <blockquote>t dx dy</blockquote>
+              </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" version="1.1">
+              <path d="M 20,80 Q 50,20 100,80 T 180,80" stroke="black" stroke-width="2" class="T" fill="none"/>
+            </svg>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p id="smoothquadratic_card">
+                  &#60;path d=
+                  <form action="#">
+                    <div class="input-field col s12 m12 l12 xl12">
+                      <input type="text" value="M 20,80 Q 50,20 100,80 T 180,80" class="validate" id="dsq"/>
+                      <label for="dsq" class="white-text">d</label>
+                    </div>
+                  </form>
+                  stroke="black" stroke-width="2" fill="none"/&#62;
+                </p>
+              </div>
+            </div>
+            <a class="waves-effect waves-teal btn col s4 m4 l4 xl4" onclick="cambiopath(this, 'T')" >Probar</a>
           </div>
         </div>
       </div>

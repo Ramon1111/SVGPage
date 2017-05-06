@@ -112,6 +112,10 @@ function cambiopath(element, comand){
     var newhtmlQ = '&#60;path d="M 20 80<br/>Q '+Qx1+','+Qy1+'<br/>'+Qx+','+Qy+'<br/>stroke="black" stroke-width="2" fill="none"/&#62;<br/><br/>&#60;line x1="'+Qx1+'" y1="'+Qy1+'" x2="20" y2="80" stroke="red"/&#62;<br/>&#60;line x1="'+Qx1+'" y1="'+Qy1+'" x2="'+Qx+'" y2="'+Qy+'" stroke="red"/&#62;';
     $("#quadratic_card").html(newhtmlQ);
   }
+  if(comand=='T'){
+    var Td = $("#dsq").val();
+    $("svg path.T").attr("d",Td);
+  }
 }
 
 $(document).ready(function(){
