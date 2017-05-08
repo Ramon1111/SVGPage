@@ -52,7 +52,7 @@
       <div class="estilo">
         <h3>&#60;style&#62;&#60;/style&#62;</h3>
         <div class="row">
-          <div class="col s12 m3 l3 xl3">
+          <div class="col s12 m12 l12 xl12">
             <p>Permite agregar directamente hojas de estilo en el contenido SVG.<br/>
             Tiene exactamente los mismos atributos que el &#60;style&#62; de HTML.</p>
           </div>
@@ -89,6 +89,31 @@
                 <p> &#60;text x="20" y="10" text-anchor="start" lengthAdjust="spacing"&#62;</p>
                 <p>A</p>
                 <p>&#60;/text&#62;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="imagen">
+        <h3>&#60;image/&#62;</h3>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Con esto se puede agregar una imagen.<br/>
+            Nota: Esta no es escalable.</p>
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text">x</span> &#38; <span class="teal-text">y</span>: Coordenadas de la imágen.</li>
+              <li class="collection-item"><span class="teal-text">width</span>: Ancho de la imagen.</li>
+              <li class="collection-item"><span class="teal-text">height</span>: Alto de la imágen.</li>
+              <li class="collection-item"><span class="teal-text">xlink:href</span>: Dirección de la imagen.</li>
+              <li class="collection-item"><span class="teal-text">preserveAspectRatio</span>: Sepa Dios.</li>
+            </ul>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p> &#60;image xlink:href="rura.png" x="50" y="10"  width="30%"/&#62;</p>
               </div>
             </div>
           </div>
