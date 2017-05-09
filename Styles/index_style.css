@@ -27,3 +27,9 @@ blockquote{
 .ventaja-desventaja{
   padding:2%;
 }
+#titulo1{
+  text-shadow: 1px 1px 3px black;
+}
+.titulo{
+  text-shadow: 2px 2px 1px black;
+}
