@@ -33,7 +33,6 @@
           <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="other_tags.html">Otras etiquetas</a></li>
-          <li><a href="mobile.html">JavaScript</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><h2 class="center-align teal-text">SVG</h2></li>
@@ -41,7 +40,6 @@
           <li><a href="introsvg.html">&#60;SVG&#62;</a></li>
           <li><a class="dropdown-button" href="#!" data-activates="dropdown_shapes_2">Formas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="other_tags.html">Otras etiquetas</a></li>
-          <li><a href="mobile.html">JavaScript</a></li>
         </ul>
       </div>
     </nav>
@@ -114,6 +112,56 @@
             <div class="card  teal lighten-2">
               <div class="card-content white-text">
                 <p> &#60;image xlink:href="rura.png" x="50" y="10"  width="30%"/&#62;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo">
+        <h3>&#60;g&#62;&#60;/g&#62;</h3>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Con esta etiqueta se pueden agrupar elementos que comparten mismos atributos y por lo tanto son similares.<br/>
+            Nota: Esta etiqueta no tiene atributos específicos.</p>
+            <h5>Atributos:</h5>
+            <ul class="collection">
+              <li class="collection-item"><span class="teal-text">xlink:href</span>: URL que redireccionaría el elemento.</li>
+              <li class="collection-item"><span class="teal-text">width</span>: Ancho de la imagen.</li>
+              <li class="collection-item"><span class="teal-text">height</span>: Alto de la imágen.</li>
+              <li class="collection-item"><span class="teal-text">xlink:href</span>: Dirección de la imagen.</li>
+              <li class="collection-item"><span class="teal-text">preserveAspectRatio</span>: Sepa Dios.</li>
+            </ul>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p> &#60;g stroke="green" fill="white" stroke-width="5"&#62;</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>&#60;/g&#62;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hipvinc">
+        <h3>&#60;a&#62;&#60;/a&#62;</h3>
+        <div class="row">
+          <div class="col s12 m12 l6 xl6">
+            <p>Con esta etiqueta se pueden agregar hipervínculos a los elementos SVG como si se tratase de un HTML.<br/>
+            Nota: Cuidado con el elemento href, algunos buscadores ya no podrán comprender atributos xlink:href y sería sólo href.</p>
+          </div>
+          <div class="col s12 m12 l6 xl6">
+            <div class="card  teal lighten-2">
+              <div class="card-content white-text">
+                <p> &#60;a xlink:href="https://www.tulindolink.com"&#62;</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>&#60;/a&#62;</p>
               </div>
             </div>
           </div>
