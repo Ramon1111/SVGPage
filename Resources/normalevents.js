@@ -121,6 +121,11 @@ function cambiopath(element, comand){
   }
 }
 
+$('#timeButton').click(function(){
+  var MyDate= new Date();
+  $('#timeI').html(MyDate.getHours()+':'+MyDate.getMinutes()+' hrs.');
+});
+
 $(document).ready(function(){
   $(".button-collapse").sideNav();
   $('.parallax').parallax();
@@ -155,4 +160,11 @@ $(document).ready(function(){
   Materialize.scrollFire(options);
 
   $(".dropdown-button").dropdown();
+
+  $('.modal').modal();
+
+  $('#prac1', '#prac2').modal('open');
+
+  $('#prac1', '#prac2').modal('close');
+
 })
